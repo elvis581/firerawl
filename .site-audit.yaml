@@ -1,0 +1,218 @@
+domain: firecraw.com
+site_name: Firecraw Tools
+
+site_type:
+  - affiliate-content-site
+
+primary_topics:
+  - web data tools
+  - Firecrawl workflows
+  - URL to Markdown
+  - web crawling and extraction
+
+target_audience:
+  - developers
+  - AI agent builders
+  - teams evaluating web data APIs
+
+business_goals:
+  - Organic traffic
+  - Affiliate conversion
+
+primary_entities:
+  - Firecraw Tools
+  - Firecrawl
+  - web data utilities
+
+content_angles:
+  - Real task testing
+  - Operator experience
+  - Step-by-step workflows
+
+unique_evidence:
+  - Working local URL and Markdown tools
+  - Rendered route and API smoke tests
+  - Explicit tool limits and independent-site disclosure
+
+preferred_page_types:
+  - review
+  - pricing
+  - alternative
+  - tutorial
+  - tool
+
+avoid_topics:
+  - Firecrawl official blog topics that are not implemented here
+
+avoid_overlap_with:
+  - firecrawl.dev official product pages
+
+keyword_density:
+  mode: observation_only
+  target: 2%-3%
+
+publishing_thresholds:
+  article_score: 85
+  site_score: 85
+  citation_score: 75
+
+citation:
+  enabled: true
+  minimum_blocks: 5
+  # true | false | unknown; this is declared configuration, not crawler detection.
+  indexnow_enabled: unknown
+  official_source_domains:
+    - firecrawl.dev
+    - docs.firecrawl.dev
+  prompt_clusters:
+    - path: /firecrawl-pricing
+      primary_query: What does Firecrawl pricing cost?
+      prompts:
+        - Is Firecrawl free?
+        - How many Firecrawl credits do I need?
+    - path: /firecrawl-api
+      primary_query: How does the Firecrawl API work?
+      prompts:
+        - How do I scrape one URL with Firecrawl?
+        - When should I use Firecrawl crawl or extraction?
+    - path: /firecrawl-mcp
+      primary_query: What is Firecrawl MCP?
+      prompts:
+        - How do I connect Firecrawl MCP to an AI agent?
+        - What is the Firecrawl MCP server URL?
+
+audit:
+  # audit_only | low_risk_fixes | continuous
+  mode: audit_only
+  periods:
+    - 7
+    - 14
+    - 28
+  core_business: Affiliate content and product evaluation
+  target_region:
+    - United States
+  primary_conversion: Affiliate outbound click
+  available_data: []
+  priority_paths: []
+  site_size: unknown
+  permissions:
+    online_access: true
+    code_read: true
+    analytics_read: false
+    code_write: false
+    production_publish: false
+    conversion_data: false
+
+crawl:
+  max_pages: 100
+  exclude_patterns:
+    - "/api/"
+    - "/search"
+
+# Optional explicit overrides reduce heuristic ambiguity.
+page_overrides:
+  - path: /
+    page_type: tool-hub
+    primary_keyword: firecrawl
+    search_intent: brand and tool discovery
+    should_index: true
+  - path: /tools
+    page_type: navigation-hub
+    primary_keyword: free web data tools
+    search_intent: tool discovery
+    should_index: true
+  - path: /tools/url-to-markdown
+    page_type: tool
+    primary_keyword: url to markdown
+    search_intent: single URL conversion
+    should_index: true
+  - path: /tools/webpage-to-markdown
+    page_type: tool
+    primary_keyword: webpage to markdown
+    search_intent: single webpage conversion
+    should_index: true
+  - path: /tools/website-to-markdown
+    page_type: tool
+    primary_keyword: website to markdown
+    search_intent: selected site pages
+    should_index: true
+  - path: /tools/llms-txt-generator
+    page_type: tool
+    primary_keyword: llms.txt generator
+    search_intent: AI discovery file
+    should_index: true
+  - path: /tools/url-extractor
+    page_type: tool
+    primary_keyword: url extractor
+    search_intent: link extraction
+    should_index: true
+  - path: /firecrawl
+    page_type: overview
+    primary_keyword: firecrawl
+    search_intent: product overview
+    should_index: true
+  - path: /firecrawl-pricing
+    page_type: pricing
+    primary_keyword: firecrawl pricing
+    search_intent: commercial investigation
+    should_index: true
+  - path: /firecrawl-alternatives
+    page_type: alternatives
+    primary_keyword: firecrawl alternatives
+    search_intent: product alternatives
+    should_index: true
+  - path: /firecrawl-api
+    page_type: tutorial
+    primary_keyword: firecrawl api
+    search_intent: developer implementation
+    should_index: true
+  - path: /firecrawl-api-key
+    page_type: tutorial
+    primary_keyword: firecrawl api key
+    search_intent: setup and access
+    should_index: true
+  - path: /firecrawl-mcp
+    page_type: tutorial
+    primary_keyword: firecrawl mcp
+    search_intent: agent integration
+    should_index: true
+  - path: /firecrawl-python
+    page_type: tutorial
+    primary_keyword: firecrawl python
+    search_intent: Python implementation
+    should_index: true
+  - path: /firecrawl-self-hosted
+    page_type: tutorial
+    primary_keyword: firecrawl self-hosted
+    search_intent: infrastructure evaluation
+    should_index: true
+  - path: /firecrawl-vs-crawl4ai
+    page_type: comparison
+    primary_keyword: firecrawl vs crawl4ai
+    search_intent: head-to-head comparison
+    should_index: true
+  - path: /firecrawl-vs-apify
+    page_type: comparison
+    primary_keyword: firecrawl vs apify
+    search_intent: head-to-head comparison
+    should_index: true
+  - path: /about
+    page_type: about
+    primary_keyword: about firecraw tools
+    search_intent: trust/about
+    should_index: true
+  - path: /affiliate-disclosure
+    page_type: trust-legal
+    primary_keyword: affiliate disclosure
+    search_intent: affiliate disclosure
+    should_index: true
+  - path: /privacy
+    page_type: trust-legal
+    primary_keyword: privacy
+    search_intent: privacy
+    should_index: true
+  - path: /terms
+    page_type: trust-legal
+    primary_keyword: terms of use
+    search_intent: terms
+    should_index: true

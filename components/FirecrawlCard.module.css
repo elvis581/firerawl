@@ -1,0 +1,42 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 22px;
+  padding: 28px;
+}
+
+.content {
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  min-width: 0;
+}
+
+.disclosure {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .card {
+    align-items: start;
+    gap: 18px;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+
+  .disclosure {
+    text-align: left;
+  }
+}

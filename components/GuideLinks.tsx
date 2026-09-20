@@ -1,0 +1,3 @@
+import Link from "next/link";
+export function GuideLinks({ current }: { current: string }) { const links=[
+  ["Firecrawl overview","/firecrawl"],["Pricing","/firecrawl-pricing"],["API","/firecrawl-api"],["API key","/firecrawl-api-key"],["MCP","/firecrawl-mcp"],["Python","/firecrawl-python"],["Self-hosted","/firecrawl-self-hosted"],["Alternatives","/firecrawl-alternatives"],["vs Crawl4AI","/firecrawl-vs-crawl4ai"],["vs Apify","/firecrawl-vs-apify"]] as const; return <div className="card-grid">{links.filter(([,href])=>href!==current).slice(0,6).map(([label,href])=><Link className="card" href={href} key={href}><h3>{label}</h3><span className="text-link">Read guide →</span></Link>)}</div>; }

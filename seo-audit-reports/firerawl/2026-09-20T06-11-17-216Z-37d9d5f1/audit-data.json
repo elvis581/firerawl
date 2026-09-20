@@ -1,0 +1,573 @@
+{
+  "runId": "2026-09-20T06:11:17.216Z-37d9d5f1",
+  "siteKey": "firerawl",
+  "profile": {
+    "domain": "firecraw.com",
+    "site_name": "Firecraw Tools",
+    "site_type": [
+      "affiliate-content-site"
+    ],
+    "primary_topics": [
+      "web data tools",
+      "Firecrawl workflows",
+      "URL to Markdown",
+      "web crawling and extraction"
+    ],
+    "target_audience": [
+      "developers",
+      "AI agent builders",
+      "teams evaluating web data APIs"
+    ],
+    "business_goals": [
+      "Organic traffic",
+      "Affiliate conversion"
+    ],
+    "primary_entities": [
+      "Firecraw Tools",
+      "Firecrawl",
+      "web data utilities"
+    ],
+    "content_angles": [
+      "Real task testing",
+      "Operator experience",
+      "Step-by-step workflows"
+    ],
+    "unique_evidence": [
+      "Working local URL and Markdown tools",
+      "Rendered route and API smoke tests",
+      "Explicit tool limits and independent-site disclosure"
+    ],
+    "preferred_page_types": [
+      "review",
+      "pricing",
+      "alternative",
+      "tutorial",
+      "tool"
+    ],
+    "avoid_topics": [
+      "Firecrawl official blog topics that are not implemented here"
+    ],
+    "avoid_overlap_with": [
+      "firecrawl.dev official product pages"
+    ],
+    "keyword_density": {
+      "mode": "observation_only",
+      "target": "2%-3%"
+    },
+    "publishing_thresholds": {
+      "article_score": 85,
+      "site_score": 85,
+      "citation_score": 75
+    },
+    "citation": {
+      "enabled": true,
+      "minimum_blocks": 5,
+      "indexnow_enabled": "unknown",
+      "official_source_domains": [
+        "firecrawl.dev",
+        "docs.firecrawl.dev"
+      ],
+      "prompt_clusters": [
+        {
+          "path": "/firecrawl-pricing",
+          "primary_query": "What does Firecrawl pricing cost?",
+          "prompts": [
+            "Is Firecrawl free?",
+            "How many Firecrawl credits do I need?"
+          ]
+        },
+        {
+          "path": "/firecrawl-api",
+          "primary_query": "How does the Firecrawl API work?",
+          "prompts": [
+            "How do I scrape one URL with Firecrawl?",
+            "When should I use Firecrawl crawl or extraction?"
+          ]
+        },
+        {
+          "path": "/firecrawl-mcp",
+          "primary_query": "What is Firecrawl MCP?",
+          "prompts": [
+            "How do I connect Firecrawl MCP to an AI agent?",
+            "What is the Firecrawl MCP server URL?"
+          ]
+        }
+      ]
+    },
+    "audit": {
+      "mode": "audit_only",
+      "periods": [
+        7,
+        14,
+        28
+      ],
+      "core_business": "Affiliate content and product evaluation",
+      "target_region": [
+        "United States"
+      ],
+      "primary_conversion": "Affiliate outbound click",
+      "available_data": [],
+      "priority_paths": [],
+      "site_size": "unknown",
+      "permissions": {
+        "online_access": true,
+        "code_read": true,
+        "analytics_read": false,
+        "code_write": false,
+        "production_publish": false,
+        "conversion_data": false
+      }
+    },
+    "crawl": {
+      "max_pages": 100,
+      "exclude_patterns": [
+        "/api/",
+        "/search"
+      ]
+    },
+    "page_overrides": [
+      {
+        "path": "/",
+        "page_type": "tool-hub",
+        "primary_keyword": "web data tools",
+        "search_intent": "tool discovery",
+        "should_index": true
+      },
+      {
+        "path": "/tools",
+        "page_type": "navigation-hub",
+        "primary_keyword": "free web data tools",
+        "search_intent": "tool discovery",
+        "should_index": true
+      },
+      {
+        "path": "/tools/url-to-markdown",
+        "page_type": "tool",
+        "primary_keyword": "url to markdown",
+        "search_intent": "single URL conversion",
+        "should_index": true
+      },
+      {
+        "path": "/tools/webpage-to-markdown",
+        "page_type": "tool",
+        "primary_keyword": "webpage to markdown",
+        "search_intent": "single webpage conversion",
+        "should_index": true
+      },
+      {
+        "path": "/tools/website-to-markdown",
+        "page_type": "tool",
+        "primary_keyword": "website to markdown",
+        "search_intent": "selected site pages",
+        "should_index": true
+      },
+      {
+        "path": "/tools/llms-txt-generator",
+        "page_type": "tool",
+        "primary_keyword": "llms.txt generator",
+        "search_intent": "AI discovery file",
+        "should_index": true
+      },
+      {
+        "path": "/tools/url-extractor",
+        "page_type": "tool",
+        "primary_keyword": "URL extractor",
+        "search_intent": "link extraction",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl",
+        "page_type": "overview",
+        "primary_keyword": "firecrawl",
+        "search_intent": "product overview",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-pricing",
+        "page_type": "pricing",
+        "primary_keyword": "firecrawl pricing",
+        "search_intent": "commercial investigation",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-alternatives",
+        "page_type": "alternatives",
+        "primary_keyword": "firecrawl alternatives",
+        "search_intent": "product alternatives",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-api",
+        "page_type": "tutorial",
+        "primary_keyword": "firecrawl api",
+        "search_intent": "developer implementation",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-api-key",
+        "page_type": "tutorial",
+        "primary_keyword": "firecrawl api key",
+        "search_intent": "setup and access",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-mcp",
+        "page_type": "tutorial",
+        "primary_keyword": "firecrawl mcp",
+        "search_intent": "agent integration",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-python",
+        "page_type": "tutorial",
+        "primary_keyword": "firecrawl python",
+        "search_intent": "Python implementation",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-self-hosted",
+        "page_type": "tutorial",
+        "primary_keyword": "firecrawl self-hosted",
+        "search_intent": "infrastructure evaluation",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-vs-crawl4ai",
+        "page_type": "comparison",
+        "primary_keyword": "firecrawl vs crawl4ai",
+        "search_intent": "head-to-head comparison",
+        "should_index": true
+      },
+      {
+        "path": "/firecrawl-vs-apify",
+        "page_type": "comparison",
+        "primary_keyword": "firecrawl vs apify",
+        "search_intent": "head-to-head comparison",
+        "should_index": true
+      },
+      {
+        "path": "/about",
+        "page_type": "about",
+        "search_intent": "trust/about",
+        "should_index": true
+      },
+      {
+        "path": "/affiliate-disclosure",
+        "page_type": "trust-legal",
+        "search_intent": "affiliate disclosure",
+        "should_index": true
+      },
+      {
+        "path": "/privacy",
+        "page_type": "trust-legal",
+        "search_intent": "privacy",
+        "should_index": true
+      },
+      {
+        "path": "/terms",
+        "page_type": "trust-legal",
+        "search_intent": "terms",
+        "should_index": true
+      }
+    ]
+  },
+  "context": {
+    "mode": "audit_only",
+    "periods": [
+      7,
+      14,
+      28
+    ],
+    "coreBusiness": "Affiliate content and product evaluation",
+    "targetRegion": [
+      "United States"
+    ],
+    "primaryConversion": "Affiliate outbound click",
+    "availableData": [],
+    "permissions": {
+      "onlineAccess": true,
+      "codeRead": true,
+      "analyticsRead": false,
+      "codeWrite": false,
+      "productionPublish": false,
+      "conversionData": false
+    },
+    "executionCapability": "report_only"
+  },
+  "scope": {
+    "coverage": "full-discovered-scope",
+    "crawledPages": 1,
+    "sitemapUrls": 0,
+    "maxPages": 100,
+    "queuedUrlsSkipped": 0,
+    "pageTypesCovered": [
+      "tool-hub"
+    ],
+    "basis": [
+      "User-supplied start URL and recursively discovered internal links"
+    ],
+    "limitations": [
+      "Sitemap fetch failed https://firecraw.com/sitemap.xml: fetch failed",
+      "No sitemap URL inventory was available."
+    ]
+  },
+  "knownFacts": [
+    "Audit mode: audit_only.",
+    "Coverage: full-discovered-scope; 1 page(s) fetched.",
+    "Available data declared: none."
+  ],
+  "assumptions": [
+    "Pages returned to the HTTP crawler represent the content available to non-JavaScript crawlers.",
+    "Site Profile page overrides and indexation intentions are current."
+  ],
+  "needsVerification": [
+    "GSC/GA4/search analytics were not available; traffic, ranking, and CTR conclusions are not verified.",
+    "Lead, order, payment, and revenue attribution data were not available.",
+    "No production publishing capability is assumed."
+  ],
+  "crawl": {
+    "baseUrl": "http://localhost:3001/",
+    "pages": [
+      {
+        "url": "http://localhost:3001/",
+        "finalUrl": "http://localhost:3001/",
+        "status": 500,
+        "robots": [],
+        "title": "",
+        "description": "",
+        "h1": [],
+        "h2": [],
+        "h3": [],
+        "sections": [],
+        "tables": [],
+        "text": "",
+        "rawText": "",
+        "wordCount": 0,
+        "internalLinks": [],
+        "externalLinks": [],
+        "images": [],
+        "schemas": [],
+        "openGraph": {},
+        "visibleDates": [],
+        "pageType": "tool-hub",
+        "inSitemap": false,
+        "discoveredFrom": [
+          "input"
+        ]
+      }
+    ],
+    "robotsText": "User-Agent: *\nAllow: /\nDisallow: /go/\nDisallow: /api/\nDisallow: /404\n\nSitemap: https://firecraw.com/sitemap.xml\n",
+    "robotsStatus": 200,
+    "sitemapUrls": [],
+    "sitemapEntries": [],
+    "sitemapStatus": 0,
+    "maxPages": 100,
+    "queuedUrlsSkipped": 0,
+    "errors": [
+      "Sitemap fetch failed https://firecraw.com/sitemap.xml: fetch failed"
+    ]
+  },
+  "pageAudits": [],
+  "citationAudits": [],
+  "citationScore": 0,
+  "siteIssues": [
+    {
+      "id": "sitemap-unavailable",
+      "priority": "P1",
+      "title": "No valid sitemap URLs discovered",
+      "evidence": [
+        "sitemap status: 0",
+        "Sitemap fetch failed https://firecraw.com/sitemap.xml: fetch failed"
+      ],
+      "confidence": "Verified",
+      "recommendation": "Publish a valid XML sitemap and reference it from robots.txt.",
+      "acceptanceCriteria": "The sitemap returns HTTP 200 and lists canonical, indexable URLs only.",
+      "category": "technical-seo",
+      "evidenceSource": [
+        "Site-level crawl and configuration signals"
+      ],
+      "currentBehavior": "sitemap status: 0 Sitemap fetch failed https://firecraw.com/sitemap.xml: fetch failed",
+      "impact": "Can materially affect important rankings, templates, user journeys, or content decisions.",
+      "changeRisk": "high",
+      "prerequisites": [
+        "Preserve the current implementation and baseline before making changes."
+      ],
+      "verificationSteps": [
+        "The sitemap returns HTTP 200 and lists canonical, indexable URLs only."
+      ],
+      "rollbackPlan": "Restore the previous URL/indexation/configuration state from version control and re-run the crawl before proceeding."
+    },
+    {
+      "id": "http-error",
+      "priority": "P0",
+      "url": "http://localhost:3001/",
+      "title": "HTTP 500 response",
+      "evidence": [
+        "Observed HTTP status 500."
+      ],
+      "confidence": "Verified",
+      "recommendation": "Restore the page or update all internal links and sitemap entries to the intended destination.",
+      "acceptanceCriteria": "The intended URL returns HTTP 200 and obsolete URLs are no longer linked or submitted.",
+      "category": "technical-seo",
+      "evidenceSource": [
+        "Audited HTTP response and HTML: http://localhost:3001/"
+      ],
+      "currentBehavior": "Observed HTTP status 500.",
+      "impact": "May block access, indexation, data integrity, or release readiness.",
+      "changeRisk": "high",
+      "prerequisites": [
+        "Preserve the current implementation and baseline before making changes."
+      ],
+      "verificationSteps": [
+        "The intended URL returns HTTP 200 and obsolete URLs are no longer linked or submitted."
+      ],
+      "rollbackPlan": "Restore the previous URL/indexation/configuration state from version control and re-run the crawl before proceeding."
+    },
+    {
+      "id": "canonical-missing",
+      "priority": "P1",
+      "url": "http://localhost:3001/",
+      "title": "Canonical is missing",
+      "evidence": [
+        "No <link rel=\"canonical\"> was found."
+      ],
+      "confidence": "Verified",
+      "recommendation": "Add a self-referencing absolute canonical for this indexable page.",
+      "acceptanceCriteria": "The rendered HTML contains one absolute canonical resolving to the preferred production URL.",
+      "category": "technical-seo",
+      "evidenceSource": [
+        "Audited HTTP response and HTML: http://localhost:3001/"
+      ],
+      "currentBehavior": "No <link rel=\"canonical\"> was found.",
+      "impact": "Can materially affect important rankings, templates, user journeys, or content decisions.",
+      "changeRisk": "high",
+      "prerequisites": [
+        "Preserve the current implementation and baseline before making changes."
+      ],
+      "verificationSteps": [
+        "The rendered HTML contains one absolute canonical resolving to the preferred production URL."
+      ],
+      "rollbackPlan": "Restore the previous URL/indexation/configuration state from version control and re-run the crawl before proceeding."
+    },
+    {
+      "id": "title-missing",
+      "priority": "P1",
+      "url": "http://localhost:3001/",
+      "title": "Title is missing",
+      "evidence": [
+        "The HTML title element is empty or absent."
+      ],
+      "confidence": "Verified",
+      "recommendation": "Add a concise title that states the page's unique search intent.",
+      "acceptanceCriteria": "One non-empty, unique title is present and matches the visible topic.",
+      "category": "technical-seo",
+      "evidenceSource": [
+        "Audited HTTP response and HTML: http://localhost:3001/"
+      ],
+      "currentBehavior": "The HTML title element is empty or absent.",
+      "impact": "Can materially affect important rankings, templates, user journeys, or content decisions.",
+      "changeRisk": "observe",
+      "prerequisites": [
+        "Preserve the current implementation and baseline before making changes."
+      ],
+      "verificationSteps": [
+        "One non-empty, unique title is present and matches the visible topic."
+      ],
+      "rollbackPlan": "Restore the previous page or template version if validation or post-change metrics regress."
+    },
+    {
+      "id": "h1-missing",
+      "priority": "P1",
+      "url": "http://localhost:3001/",
+      "title": "H1 is missing",
+      "evidence": [
+        "No visible H1 was extracted."
+      ],
+      "confidence": "Verified",
+      "recommendation": "Add one descriptive H1 aligned with the title and main content.",
+      "acceptanceCriteria": "The page has exactly one visible H1 describing its unique purpose.",
+      "category": "technical-seo",
+      "evidenceSource": [
+        "Audited HTTP response and HTML: http://localhost:3001/"
+      ],
+      "currentBehavior": "No visible H1 was extracted.",
+      "impact": "Can materially affect important rankings, templates, user journeys, or content decisions.",
+      "changeRisk": "observe",
+      "prerequisites": [
+        "Preserve the current implementation and baseline before making changes."
+      ],
+      "verificationSteps": [
+        "The page has exactly one visible H1 describing its unique purpose."
+      ],
+      "rollbackPlan": "Restore the previous page or template version if validation or post-change metrics regress."
+    },
+    {
+      "id": "open-graph-incomplete",
+      "priority": "P3",
+      "url": "http://localhost:3001/",
+      "title": "Open Graph metadata is incomplete",
+      "evidence": [
+        "og:title: missing",
+        "og:description: missing"
+      ],
+      "confidence": "Verified",
+      "recommendation": "Add accurate Open Graph title, description, URL, and representative image.",
+      "acceptanceCriteria": "Required Open Graph fields resolve and match visible page content.",
+      "category": "technical-seo",
+      "evidenceSource": [
+        "Audited HTTP response and HTML: http://localhost:3001/"
+      ],
+      "currentBehavior": "og:title: missing og:description: missing",
+      "impact": "An enhancement opportunity that does not block publication.",
+      "changeRisk": "low",
+      "prerequisites": [
+        "Preserve the current implementation and baseline before making changes."
+      ],
+      "verificationSteps": [
+        "Required Open Graph fields resolve and match visible page content."
+      ],
+      "rollbackPlan": "Revert the scoped file change and repeat the affected-page check."
+    },
+    {
+      "id": "schema-missing",
+      "priority": "P2",
+      "url": "http://localhost:3001/",
+      "title": "No JSON-LD schema found",
+      "evidence": [
+        "No application/ld+json block was extracted."
+      ],
+      "confidence": "Verified",
+      "recommendation": "Add only schema that accurately describes visible content and page identity.",
+      "acceptanceCriteria": "Valid JSON-LD is present and its claims are visible on the page.",
+      "category": "technical-seo",
+      "evidenceSource": [
+        "Audited HTTP response and HTML: http://localhost:3001/"
+      ],
+      "currentBehavior": "No application/ld+json block was extracted.",
+      "impact": "Creates a page-level optimization or experience gap with moderate impact.",
+      "changeRisk": "observe",
+      "prerequisites": [
+        "Preserve the current implementation and baseline before making changes."
+      ],
+      "verificationSteps": [
+        "Valid JSON-LD is present and its claims are visible on the page."
+      ],
+      "rollbackPlan": "Restore the previous page or template version if validation or post-change metrics regress."
+    }
+  ],
+  "cannibalization": [],
+  "overlaps": [],
+  "siteScore": 0,
+  "counts": {
+    "P0": 1,
+    "P1": 4,
+    "P2": 1,
+    "P3": 1
+  },
+  "canPublish": false,
+  "gateReasons": [
+    "Site score 0 is below 85.",
+    "AI Citation score 0 is below 75.",
+    "1 P0 issue(s) block publication."
+  ]
+}
