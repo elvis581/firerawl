@@ -32,7 +32,7 @@ function NavMenu({ label, href, links }: { label: string; href: string; links: r
 }
 
 export function Header() {
-  return <header className="site-header"><div className="container nav-wrap"><Link className="brand" href="/"><span className="brand-mark">✦</span><span>Firecraw Tools</span></Link><nav className="main-nav" aria-label="Primary"><NavMenu label="Tools" href="/tools" links={toolLinks}/><NavMenu label="Guides" href="/firecrawl" links={guideLinks}/><NavMenu label="Comparisons" href="/firecrawl-alternatives" links={comparisonLinks}/><Link href="/about">About</Link></nav><AffiliateButton placement="inline">Try Firecrawl</AffiliateButton></div></header>;
+  return <header className="site-header"><div className="container nav-wrap"><Link className="brand" href="/"><span className="brand-mark">✦</span><span>Firecraw Tools</span></Link><nav className="main-nav" aria-label="Primary"><NavMenu label="Tools" href="/tools" links={toolLinks}/><NavMenu label="Guides" href="/firecrawl" links={guideLinks}/><NavMenu label="Comparisons" href="/firecrawl-alternatives" links={comparisonLinks}/><Link href="/about">About</Link></nav><AffiliateButton placement="inline" sourceComponent="header_nav">Try Firecrawl</AffiliateButton></div></header>;
 }
 
 export function Footer() {

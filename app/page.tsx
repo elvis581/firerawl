@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { AffiliateButton } from "@/components/AffiliateButton";
+import { HomeUrlForm } from "@/components/HomeUrlForm";
 import { FAQSection } from "@/components/StructuredData";
 import { pageFaqs } from "@/lib/faq";
 import { pageMetadata } from "@/lib/seo";
@@ -22,17 +23,10 @@ export default function Home() {
           <span className="eyebrow">Firecrawl tools for developers</span>
           <h1>Free web data tools for Firecrawl workflows.</h1>
           <p>Convert a public URL to Markdown, inspect links, or select a small set of sitemap pages before you commit to a larger crawl. The tools are independent, focused, and free to try.</p>
-          <form className="hero-form" action="/tools/url-to-markdown" method="get">
-            <label className="hero-form-label" htmlFor="home-url">Start with a public URL</label>
-            <div className="hero-form-row">
-              <input className="url-input" id="home-url" name="url" type="url" placeholder="https://example.com/article" required />
-              <button className="button primary" type="submit">Convert URL</button>
-            </div>
-            <p className="tool-help">Public http(s) pages only. No account required.</p>
-          </form>
+          <HomeUrlForm />
           <div className="hero-links">
             <Link className="button secondary" href="/tools">Explore all tools</Link>
-            <AffiliateButton placement="inline" variant="text">Need larger crawls? Try Firecrawl</AffiliateButton>
+            <AffiliateButton placement="inline" variant="text" sourceComponent="homepage_hero">Need larger crawls? Try Firecrawl</AffiliateButton>
           </div>
           <p className="tool-help">Sponsored links are labeled. Firecraw Tools is an independent website.</p>
         </div>
