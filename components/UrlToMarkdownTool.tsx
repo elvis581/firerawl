@@ -112,10 +112,10 @@ export function UrlToMarkdownTool({ title = "URL to Markdown", placeholder = "ht
   }
 
   return <div className="tool-panel">
-    <form onSubmit={run} noValidate>
+    <form onSubmit={run} noValidate aria-busy={loading}>
       <label className="field-label" htmlFor="url-markdown-input">{title} input</label>
-      <div className="url-row"><input id="url-markdown-input" className={`url-input${fieldError ? " input-error" : ""}`} value={url} onChange={(event) => updateUrl(event.target.value)} placeholder={placeholder} type="url" aria-invalid={Boolean(fieldError)} aria-describedby={fieldError ? "url-input-error" : "url-input-help"} /><button className="button primary" type="submit" disabled={loading}>{loading ? "Converting..." : "Convert"}</button></div>
-      {fieldError ? <div id="url-input-error" className="tool-error" role="alert">{fieldError}</div> : null}
+      <div className="url-row"><input id="url-markdown-input" className={`url-input${fieldError ? " input-error" : ""}`} value={url} onChange={(event) => updateUrl(event.target.value)} placeholder={placeholder} type="url" aria-invalid={Boolean(fieldError)} aria-describedby={fieldError ? "url-input-error" : "url-input-help"} /><button className="button primary" type="submit" disabled={loading} aria-busy={loading}>{loading ? "Converting..." : "Convert"}</button></div>
+      {fieldError ? <div id="url-input-error" className="tool-error visible-error" role="alert" aria-live="assertive">{fieldError}</div> : null}
       <div className="tool-actions"><button className="text-button" type="button" onClick={() => updateUrl("https://example.com")}>Use example URL</button><button className="text-button" type="button" onClick={clear}>Clear</button></div>
       <p id="url-input-help" className="tool-help">Public http(s) pages only · up to 2 MB · no account required</p>
     </form>

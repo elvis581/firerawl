@@ -28,16 +28,17 @@ export function HomeUrlForm() {
     if (submitting) return;
     setError("");
     setSubmitting(true);
-    window.location.assign(`/tools/url-to-markdown?url=${encodeURIComponent(value)}&autostart=1`);
+    window.setTimeout(() => window.location.assign(`/tools/url-to-markdown?url=${encodeURIComponent(value)}&autostart=1`), 50);
   }
 
-  return <form className="hero-form" onSubmit={submit} noValidate>
+  return <form className="hero-form" action="/tools/url-to-markdown" method="get" onSubmit={submit} noValidate aria-busy={submitting}>
     <label className="hero-form-label" htmlFor="home-url">Start with a public URL</label>
     <div className="hero-form-row">
       <input className={`url-input${error ? " input-error" : ""}`} id="home-url" name="url" value={url} onChange={(event) => { setUrl(event.target.value); setError(""); }} type="url" placeholder="https://example.com/article" aria-invalid={Boolean(error)} aria-describedby={error ? "home-url-error" : "home-url-help"} />
-      <button className="button primary" type="submit" disabled={submitting}>{submitting ? "Converting..." : "Convert URL"}</button>
+      <button className="button primary" type="submit" disabled={submitting} aria-busy={submitting}>{submitting ? "Converting..." : "Convert URL"}</button>
     </div>
-    {error ? <div id="home-url-error" className="tool-error" role="alert">{error}</div> : null}
+    <input type="hidden" name="autostart" value="1" />
+    {error ? <div id="home-url-error" className="tool-error visible-error" role="alert" aria-live="assertive">{error}</div> : null}
     <p id="home-url-help" className="tool-help">Public http(s) pages only. No account required.</p>
   </form>;
 }
