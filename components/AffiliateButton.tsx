@@ -2,7 +2,7 @@
 
 import type { AffiliatePlacement } from "@/lib/affiliate";
 
-export function AffiliateButton({ placement, children, variant = "primary" }: { placement: AffiliatePlacement; children: React.ReactNode; variant?: "primary" | "secondary" }) {
+export function AffiliateButton({ placement, children, variant = "primary" }: { placement: AffiliatePlacement; children: React.ReactNode; variant?: "primary" | "secondary" | "text" }) {
   function track() {
     if (typeof window !== "undefined") {
       const event = { event: "affiliate_click", page: window.location.pathname, placement, cta_text: String(children) };
@@ -13,5 +13,6 @@ export function AffiliateButton({ placement, children, variant = "primary" }: { 
       if (dataLayer) dataLayer.push(event);
     }
   }
-  return <a className={`button ${variant}`} href="/go/firecrawl" onClick={track} rel="sponsored nofollow noopener">{children}</a>;
+  const className = variant === "text" ? "affiliate-text" : `button ${variant}`;
+  return <a className={className} href="/go/firecrawl" onClick={track} rel="sponsored nofollow noopener noreferrer">{children}</a>;
 }

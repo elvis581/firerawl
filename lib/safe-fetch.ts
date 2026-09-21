@@ -6,7 +6,7 @@ const MAX_REDIRECTS = 4;
 
 function blockedIPv4(ip: string) {
   const [a, b, c] = ip.split(".").map(Number);
-  return a === 0 || a === 10 || a === 100 && b >= 64 && b <= 127 || a === 127 || a === 169 && b === 254 || a === 172 && b >= 16 && b <= 31 || a === 192 && b === 0 || a === 192 && b === 168 || a === 198 && b === 51 && c === 100 || a === 203 && b === 0 && c === 113 || a >= 224;
+  return a === 0 || a === 10 || a === 100 && b >= 64 && b <= 127 || a === 127 || a === 169 && b === 254 || a === 172 && b >= 16 && b <= 31 || a === 192 && (b === 0 || b === 168) || a === 198 && (b === 18 || b === 19 || b === 51 && c === 100) || a === 203 && b === 0 && c === 113 || a >= 224;
 }
 
 function blockedIPv6(ip: string) {
@@ -24,6 +24,8 @@ export function isBlockedAddress(ip: string) {
 export async function validatePublicUrl(raw: string) {
   const url = new URL(raw);
   if (!["http:", "https:"].includes(url.protocol) || url.username || url.password) throw new Error("Only public http and https URLs are supported.");
+  const hostname = url.hostname.toLowerCase().replace(/\.$/, "");
+  if (hostname === "localhost" || hostname.endsWith(".localhost") || hostname.endsWith(".local") || hostname === "metadata.google.internal" || hostname === "metadata" || hostname === "instance-data.ec2.internal") throw new Error("Local and cloud metadata hosts are not allowed.");
   const addresses = await dns.lookup(url.hostname, { all: true });
   if (!addresses.length || addresses.some(({ address }) => isBlockedAddress(address))) throw new Error("That host resolves to a private or blocked network.");
   return url;

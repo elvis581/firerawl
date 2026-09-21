@@ -9,8 +9,8 @@ export function pageMetadata(title: string, description: string, path: string): 
     title,
     description,
     alternates: { canonical },
-    openGraph: { title, description, url: canonical, siteName: SITE_NAME, type: "website" },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title, description, url: canonical, siteName: SITE_NAME, type: "website", images: [{ url: "/og-card.svg", width: 1200, height: 630, alt: "Firecraw Tools web data utilities" }] },
+    twitter: { card: "summary_large_image", title, description, images: ["/og-card.svg"] },
   };
 }
 
