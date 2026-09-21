@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function isPublicHttpUrl(value: string) {
   try {
@@ -17,6 +17,7 @@ export function HomeUrlForm() {
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const submitLockRef = useRef(false);
 
   function submit(event: React.FormEvent) {
     event.preventDefault();
@@ -25,8 +26,9 @@ export function HomeUrlForm() {
       setError("Enter a complete public http(s) URL, such as https://example.com/article.");
       return;
     }
-    if (submitting) return;
+    if (submitting || submitLockRef.current) return;
     setError("");
+    submitLockRef.current = true;
     setSubmitting(true);
     window.setTimeout(() => window.location.assign(`/tools/url-to-markdown?url=${encodeURIComponent(value)}&autostart=1`), 50);
   }
