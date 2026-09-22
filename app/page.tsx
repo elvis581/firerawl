@@ -26,7 +26,7 @@ export default function Home() {
           <HomeUrlForm />
           <div className="hero-links">
             <Link className="button secondary" href="/tools">Explore all tools</Link>
-            <AffiliateButton placement="inline" variant="text" sourceComponent="homepage_hero">Need larger crawls? Try Firecrawl</AffiliateButton>
+            <AffiliateButton placement="inline" variant="primary" sourceComponent="homepage_hero">Need larger crawls? Try Firecrawl</AffiliateButton>
           </div>
           <p className="tool-help">Sponsored links are labeled. Firecraw Tools is an independent website.</p>
         </div>

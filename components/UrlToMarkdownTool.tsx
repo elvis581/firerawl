@@ -47,6 +47,14 @@ export function UrlToMarkdownTool({ title = "URL to Markdown", placeholder = "ht
       const response = await fetch("/api/markdown", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ url: trimmedUrl }) });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Unable to convert this URL.");
+      const nextParams = new URLSearchParams(window.location.search);
+      nextParams.set("url", trimmedUrl);
+      nextParams.delete("autostart");
+      const nextQuery = nextParams.toString();
+      const nextAddress = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ""}${window.location.hash}`;
+      if (`${window.location.pathname}${window.location.search}${window.location.hash}` !== nextAddress) {
+        window.history.replaceState(null, "", nextAddress);
+      }
       setResult(data);
       trackEvent("tool_success", { source_component: sourceComponent, tool_name: "url_to_markdown", result_state: "success" });
     } catch (err) {
